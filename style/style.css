@@ -1,11 +1,11 @@
 *{
     font-family: 'Roboto Condensed', sans-serif;
-
  color: #fff;
 
 }
 body{
     background-color: #212529; 
+    color: #fff;
 }
 .container h1{
     text-decoration: underline;
@@ -24,7 +24,7 @@ width: 100%;
     background-color: #212529;
     color: #fff;
     border: 2px solid #fff;
-display:;
+
 }
 .form-control{
     background-color: #212529;

@@ -1,5 +1,8 @@
-console.log('OM NAMAY SIVAY')
+console.log('OM NAMAY SIVAY');
+showNote();
+
 let addBTn=document.getElementById('addBtn');
+
 
 addBTn.addEventListener('click',function(e){
    console.log('working');
@@ -16,4 +19,42 @@ addBTn.addEventListener('click',function(e){
 
   addTxt.value="";
   console.log(notesObj);
+  showNote();
 })
+
+
+function showNote() {
+    let html="";
+    let notes =localStorage.getItem("notes");
+
+    if (notes==null) {
+        notesObj=[]; 
+    }
+    else {
+        notesObj=JSON.parse(notes);
+  }
+  notesObj.forEach(function(element,index){
+
+
+html +=`
+    <div class="notesCard card my-3 mx-3" style="width: 18rem;">
+           
+    <div class="card-body">
+      <h5 class="card-title">Note ${index +1}</h5>
+      <p class="card-text"> ${element}</p>
+      <a href="#" class="btn btn-primary">Delete Note</a>
+    </div>
+  </div> ` 
+
+
+
+})
+let elem =document.getElementById('notes');
+if (notesObj.length !=0) {
+     elem.innerHTML=html;
+ }
+ else{
+      elem.innerHTML='Nothing to show here';
+}
+
+}
