@@ -54,7 +54,7 @@ function showNote() {
         elem.innerHTML = html;
     }
     else {
-        elem.innerHTML = 'Nothing to show here';
+        elem.innerHTML = `Nothing to show here. Click On "ADD NOTE". `;
     }
 
 }
