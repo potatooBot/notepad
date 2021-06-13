@@ -1,4 +1,4 @@
-console.log('OM NAMAY SIVAY');
+// console.log('OM NAMAY SIVAY');
 showNote();
 
 let addBTn = document.getElementById('addBtn');
@@ -100,6 +100,8 @@ search.addEventListener('input', function () {
             
         } else {
             element.style.display="none";
+            let elem =document.getElementById('notes');
+            elem.innerHTML="Nothing to show here...Sorry Fucker"
         }
 
     })
