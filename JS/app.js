@@ -20,7 +20,7 @@ addBTn.addEventListener('click',function(e){
   addTxt.value="";
   console.log(notesObj);
   showNote();
-})
+}) 
 
 
 function showNote() {
@@ -42,7 +42,7 @@ html +=`
     <div class="card-body">
       <h5 class="card-title">Note ${index +1}</h5>
       <p class="card-text"> ${element}</p>
-      <a href="#" class="btn btn-primary">Delete Note</a>
+      <button id="${index}" onclick="deleteNotes(this.id)" class="btn btn-primary">Delete Note</button>
     </div>
   </div> ` 
 
@@ -57,4 +57,27 @@ if (notesObj.length !=0) {
       elem.innerHTML='Nothing to show here';
 }
 
+}
+// function to delete
+
+// ************
+
+
+
+function deleteNotes(index) {
+ 
+    let notes = localStorage.getItem("notes");
+
+     if (notes==null) {
+        notesObj=[]; 
+    }
+    else {
+        notesObj=JSON.parse(notes);
+  }
+
+  console.log("I am deleting " +index);
+  notesObj.splice(index,1);
+localStorage.setItem("notes",JSON.stringify(notesObj));
+showNote();
+    
 }
