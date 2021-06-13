@@ -60,7 +60,7 @@ function showNote() {
 }
 // function to delete
 
-// ************
+// **************
 
 
 
