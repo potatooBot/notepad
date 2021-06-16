@@ -5,7 +5,7 @@ let addBTn = document.getElementById('addBtn');
 
 
 addBTn.addEventListener('click', function (e) {
-    console.log('working');
+    // console.log('working');
     let addTxt = document.getElementById('addTxt');
     let notes = localStorage.getItem("notes");
     if (notes == null) {
