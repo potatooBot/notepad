@@ -20,7 +20,8 @@ addBTn.addEventListener('click', function (e) {
     addTxt.value = "";
     //   console.log(notesObj);
     showNote();
-})
+}
+)
 
 
 function showNote() {
